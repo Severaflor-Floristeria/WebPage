@@ -1,0 +1,29 @@
+PROMPT MADRE · RETOQUE DE FOTOS CON GEMINI (SEVERA FLOR)
+=========================================================
+Uso: en gemini.google.com, sube UNA foto y pega este texto.
+Repite foto por foto (solo las que tengan fondo feo).
+
+--- PROMPT (fondo claro / estudio) ---
+Retoca esta fotografía de producto de una floristería. REGLAS ESTRICTAS:
+1. NO modifiques el arreglo floral: mismas flores, mismos colores, misma
+   forma, mismo empaque y misma cinta. El producto debe quedar IDÉNTICO.
+2. Reemplaza ÚNICAMENTE el fondo por un estudio fotográfico limpio:
+   fondo neutro gris muy claro con degradado suave, superficie lisa,
+   sombra natural suave bajo el arreglo.
+3. Ilumina como fotografía profesional de producto: luz suave difusa,
+   sin reflejos duros ni sombras fuertes.
+4. Conserva el logo o marca de agua si aparece en la imagen.
+5. Resultado realista, alta resolución, sin elementos añadidos.
+
+--- PROMPT (versión fondo oscuro / premium) ---
+Igual que el anterior, pero cambia el punto 2 por:
+2. Reemplaza ÚNICAMENTE el fondo por un estudio oscuro elegante:
+   fondo negro con viñeta sutil y un leve brillo magenta (#FF0F7B)
+   en una esquina, superficie oscura lisa con reflejo tenue.
+
+CONSEJOS
+- Si Gemini altera las flores, responde: "Repite manteniendo el arreglo
+  floral EXACTAMENTE igual al original, solo cambia el fondo."
+- Guarda cada resultado con el mismo nombre del archivo original
+  + "-retocada" para no perder el orden de los códigos.
+- Las fotos ya optimizadas y con logo están en Photos/_web/.
