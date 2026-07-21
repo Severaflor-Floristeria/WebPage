@@ -45,6 +45,9 @@ a.lnk.lime{border-color:rgba(166,196,0,.5);color:#A6C400}
 @media(prefers-reduced-motion:reduce){.doo{animation:none!important}}
 @media(max-width:480px){.rosa{width:190px;height:190px}.peonia{width:175px;height:175px}.crown{right:4%}.sunf{width:66px;height:66px;left:-18px}.tulip{width:48px;height:80px}.stem{height:210px}}
 </style>
+<!-- Google tag (gtag.js) - GA4 Severa Flor -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KX7LG1L3FC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KX7LG1L3FC');</script>
 </head>
 <body>
 <div class="doo crown" aria-hidden="true"><svg viewBox="0 0 70 50" fill="none" stroke="#A6C400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42 L14 16 L26 30 L35 10 L44 30 L56 16 L62 42 Z"/></svg></div>
@@ -91,7 +94,7 @@ a.lnk.lime{border-color:rgba(166,196,0,.5);color:#A6C400}
   <h1 aria-label="Severa Flor Floristería"><img class="lgimg" src="severa-flor-logo-oscuro.png" alt="Severa Flor Floristería Bogotá"></h1>
   <div class="l2">FLORES CON ACTITUD · DISEÑOS QUE IMPACTAN</div>
   <p class="tag">Floristería en Bogotá · Entrega el mismo día</p>
-  <a class="lnk main" href="https://wa.me/573202005973?text=Hola%20Severa%20Flor%2C%20quiero%20pedir%20un%20arreglo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+  <a class="lnk main" href="https://wa.me/573202005973?text=Hola%20Severa%20Flor%2C%20quiero%20pedir%20un%20arreglo%20%28web%29" target="_blank" rel="noopener">Pedir por WhatsApp</a>
   <a class="lnk lime" href="catalogo.html">Ver el catálogo completo</a>
   <a class="lnk" href="https://www.rappi.com.co/tiendas/900489693-floreriaseveraflor-mt-enc" target="_blank" rel="noopener">Pedir por Rappi</a>
   <a class="lnk" href="https://www.instagram.com/floreria_severa_flor/" target="_blank" rel="noopener">Instagram</a>
@@ -100,5 +103,27 @@ a.lnk.lime{border-color:rgba(166,196,0,.5);color:#A6C400}
   <a class="lnk" href="flores-condolencias-bogota.html">Condolencias · atención urgente</a>
   <div class="foot">SEVERA FLOR FLORISTERÍA · BOGOTÁ</div>
 </div>
+<!-- Seguimiento de clics a WhatsApp -> GA4 -->
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || !t.closest) return;
+    var a = t.closest('a[href*="wa.me"]');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    var txt = '';
+    try { txt = decodeURIComponent((href.split('text=')[1] || '')); } catch(err){ txt = ''; }
+    var m = txt.match(/\(([A-Z]{3}-\d{2})\)/);
+    if (typeof gtag === 'function') {
+      gtag('event', 'contacto_whatsapp', {
+        codigo_diseno: m ? m[1] : 'generico',
+        pagina: location.pathname,
+        mensaje: txt.slice(0, 100)
+      });
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
